@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: sans-serif;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 240px;
+    border-radius: 10px;
+    border: 5px solid #ebfdfd;
+    animation: doi-mau-vien 10s ease-out infinite;
+}
+.display{
+    display: flex;
+    position: absolute;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.video{
+    z-index: 1;
+    animation: animation-video 3s ease forwards;
+    transform: translateX(0);
+    animation-delay: var(--delay);
+    will-change: opacity, transform;
+}
+.container{
+    display: flex;
+    position: absolute;
+    width: 320px;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(/1763697245746.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+p{
+    position: absolute;
+    opacity: 0;
+    color: #ed4c5e;
+    font-weight: bold;
+    animation: animation-text 7s ease forwards;
+    animation-delay: var(--delay);
+    will-change: opacity, transform;
+    margin-top: 160px;
+}
+
+@keyframes animation-text{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    
+}
+@keyframes animation-video{
+    to{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+@keyframes doi-mau-vien {
+    0%   { border-color: #ebfdfd; }
+    10%  { border-color: #52f1d5; }
+    20%  { border-color: #435d76; }
+    30%  { border-color: #d4d4d5; }
+    40%  { border-color: #ed4c5e; }
+    50%  { border-color: #fecda5; }
+    60%  { border-color: #fe881c; }
+    70%  { border-color: #fdce1c; }
+    80%  { border-color: #a690d1; }
+    90%  { border-color: #fac1ea; }
+    100% { border-color: #ebfdfd; }
+  }
